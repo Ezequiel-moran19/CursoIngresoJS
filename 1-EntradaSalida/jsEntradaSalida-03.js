@@ -4,9 +4,27 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	var nombreIngresado;
-	nombreIngresado=txtIdNombre.value;
-	alert("ok");
+	nombreIngresado= document.getElementById("txtIdNombre").value;
+	alert("su nombre es "+ nombreIngresado);
 
 }
 
 
+ /*
+ 
+ ENTRADAS
+ 
+    prompt 
+   id.value o document.getElementbyid(""). value
+
+ PROCESOS
+
+
+ SALIDAS
+
+
+    alert
+
+
+
+  */
