@@ -22,3 +22,30 @@ function sumar()
 }
 
 
+
+
+
+
+
+
+/*
+ ENTRADA: Dos numeros
+ PROCESO: Realizar la suma de los dos 2 numeros
+ SALIDA:La suma de los dos numeros
+
+
+ ENTRADAS
+ 
+    prompt 
+    document.getElementByid o id.value
+ PROCESOS
+
+
+ SALIDAS
+
+    document write
+    alert
+    
+
+
+  */

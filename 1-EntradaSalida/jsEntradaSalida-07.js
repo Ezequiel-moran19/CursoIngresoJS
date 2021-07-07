@@ -18,7 +18,7 @@ function sumar()
 
     alert("la suma es: " + Rdo);
 
-	alert("");	
+
 }
 
 function restar()
