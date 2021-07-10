@@ -4,25 +4,28 @@
 
 
 function mostrar()
-{ /*
-	var parejaUno;
-	var parejaDos;
+{ 
+	var nombreUno;
+	var nombreDos;
 	var kilosUno;
 	var kilosDos;
 	var suma;
 	var promedio;
 
-	parejaUno = prompt("Su nombre es");
-    parejaDos = prompt("Su nombre es");
+	nombreUno = prompt("Su nombre es");
+    nombreDos = prompt("su nombre es"); 
+     
     kilosUno = prompt("Su peso es");
-    kilosDos = prompt("Su peso es");
+    kilosDos = prompt("su peso es");
+    
     kilosUno = parseInt(kilosUno);
     kilosDos = parseInt(kilosDos);
-    suma= parseInt(suma);
+
+  
 
     suma = kilosUno + kilosDos;
     promedio = suma /2;
 
-    alert("el nombre es: " + parejaUno + " y " + parejaDos +  " el promedio de peso es: " + promedio);
- */
+    alert("Ustedes se llaman: " + nombreUno + " y " + nombreDos + "\nPesan: " + kilosUno + " y " + kilosDos + "\ny el promedio de peso es de: " + promedio);
+ 
 }
