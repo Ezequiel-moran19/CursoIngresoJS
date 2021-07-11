@@ -16,7 +16,7 @@ function mostrar()
  
     prompt 
    id.value o document.getElementbyid(""). value
-
+   id.value
  PROCESOS
 
 
@@ -24,7 +24,8 @@ function mostrar()
 
 
     alert
-
-
+    document.white
+    console.log
+    
 
   */
