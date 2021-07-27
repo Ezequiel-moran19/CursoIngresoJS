@@ -47,7 +47,7 @@
                         {
                             descuento =0.4;
                         }
-                        else
+                         else
                         {
                             descuento=0.3;
                         }

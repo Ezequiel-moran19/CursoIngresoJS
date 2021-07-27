@@ -9,7 +9,60 @@ function mostrar()
 	var seguir;
 	var numeroIngresado;
 
-	contador = 0;
+   suma = 0;
+   contador = 0;
+   
+   seguir = true;
+
+   while( seguir == true)
+   {
+   	numeroIngresado = prompt("Ingrese un numero: ");
+      numeroIngresado = parseInt(numeroIngresado);
+   
+    while(numeroIngresado < 0 || numeroIngresado > 100 )
+    {
+      numeroIngresado = prompt("Error ingrese otro numero: ");
+      numeroIngresado = parseInt(numeroIngresado);
+    }
+     
+     suma += numeroIngresado;
+     contador++;
+
+     seguir = confirm("quiere seguir? ");
+
+   }	
+   txtIdSuma.value= suma;
+   txtIdPromedio.value = suma / contador; 
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+contador = 0;
 	suma = 0;
 	seguir = true;
 	
@@ -24,7 +77,6 @@ function mostrar()
         numeroIngresado= parseInt(numeroIngresado);
       }
 
-
       suma += numeroIngresado;
       
       contador ++;
@@ -34,31 +86,4 @@ function mostrar()
    }
 	txtIdSuma.value= suma;
 	txtIdPromedio.value= suma/contador;
-}
-/*
-var contador;
-	var suma;
-	var seguir;
-	var numeroIngresado;
-
-	contador = 0;
-	suma = 0;
-	segui = "si";
-	
-	while(seguir == "si")
-   {
-      numeroIngresado = prompt("ingrese un numero");
-      //para poder escribir un msj 
-      numeroIngresado= parseInt(numeroIngresado);
-
-      suma += numeroIngresado;
-      //suma = suma + numeroIngresado
-      contador ++;
-      //contador = contador + 1;
-      //contador+= 1;
-      seguir = prompt("Ingresar otro? si/no");
-
-   }
-	txtIdSuma.value= suma;
-	txtIdPromedio.value= suma/contador;
-*/
+	*/

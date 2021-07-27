@@ -10,7 +10,7 @@ function mostrar()
 	mesDelAño =txtIdMes.value;
 	
     switch(mesDelAño)
-    {   // destro del case ponemos el valor que va el el switch..
+    {   // destro del case ponemos el valor que va el el switch
         case "Febrero": 
           mensaje = "Este mes tiene 28 dias"; 
         break;

@@ -11,7 +11,7 @@ function mostrar()
 	while(contador<5)
    {
       numeroIngresado = prompt("ingrese un numero");
-      //para poder escribir un msj 
+    
       numeroIngresado= parseInt(numeroIngresado);
 
       suma += numeroIngresado;
@@ -23,7 +23,7 @@ function mostrar()
    }
 	txtIdSuma.value= suma;
 	txtIdPromedio.value= suma/contador;
-}//FIN DE LA FUNCIÓN
+}
 
 /*
 entradas: 5 numeros(dentro)
