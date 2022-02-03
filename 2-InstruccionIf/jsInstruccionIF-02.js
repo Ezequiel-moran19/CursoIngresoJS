@@ -1,13 +1,30 @@
 function mostrar()
 {
-    var edad;
+    let edad;
 
-	edad = document.getElementById("txtIdEdad").value;
-	edad = parseInt(edad);
+    edad= txtIdEdad.value;
+    
+    if (edad < 18)
+     {
+        alert("La persona es menor");
+     }
+  
+
+
+
+
+
+
+}
+
+/*
+var edad;
+
+    edad = document.getElementById("txtIdEdad").value;
+    edad = parseInt(edad);
 
    if (edad>=20)
    {
-	  alert("la persona es mayor");
+      alert("la persona es mayor");
    }
-
-}
+ */

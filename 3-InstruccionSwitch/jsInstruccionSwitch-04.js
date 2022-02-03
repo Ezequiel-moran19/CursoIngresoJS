@@ -5,10 +5,44 @@ si tiene 31 días.*/
 
 function mostrar()
 {
-	var mesDelAño;
-	var mensaje;
-	mesDelAño =txtIdMes.value;
-	
+	let mesDelAño;
+    let mensaje;
+
+    mesDelAño= txtIdMes.value;
+
+    switch(mesDelAño) 
+    {
+        case "Febrero":
+
+        mensaje= "tiene 28 días.";
+
+        break;
+
+        case "Abril":
+        case "Julio":
+        case "Septiembre":
+        case "Noviembre":
+
+        mensaje= "tiene 30 días.";
+
+        break;
+
+        default:
+
+        mensaje = "tiene 31 días.";
+
+        break;
+    }
+ 
+       alert(mensaje);
+  
+}
+
+/*
+var mesDelAño;
+    var mensaje;
+    mesDelAño =txtIdMes.value;
+    
     switch(mesDelAño)
     {   // destro del case ponemos el valor que va el el switch
         case "Febrero": 
@@ -25,8 +59,4 @@ function mostrar()
            mensaje = "Este mes tiene 31 dias";
         break;
        //utilizamos el default para ejecutar los demas meses
-    }  alert(mensaje);
-
-
-
-}
+    }  alert(mensaje);*/

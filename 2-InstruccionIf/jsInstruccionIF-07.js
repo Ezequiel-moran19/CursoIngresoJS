@@ -5,16 +5,15 @@
 */
 function mostrar()
 {
-	var edad;
-  var estCivil;
+	  let edad;
+    let estadCilvil;
 
-	edad = txtIdEdad.value;
-	edad = parseInt(edad);
-	estCivil = estadoCivil.value;
+    edad= txtIdEdad.value;
+    estadCilvil= estadoCivil.value;
 
-    if (edad < 18 && estCivil != 'soltero')
+    if (edad < 18 && estadCilvil != "soltero")
     {
-      alert("Es muy pequeño para no ser soltero");
+       alert("Es muy pequeño para NO ser soltero");
     }
      
 
@@ -25,3 +24,16 @@ function mostrar()
 
 //FIN DE LA FUNCIÓN
 // txtIdEdad   estadoCivil
+/*var edad;
+  var estCivil;
+
+  edad = txtIdEdad.value;
+  edad = parseInt(edad);
+  estCivil = estadoCivil.value;
+
+    if (edad < 18 && estCivil != 'soltero')
+    {
+      alert("Es muy pequeño para no ser soltero");
+    }
+
+    */

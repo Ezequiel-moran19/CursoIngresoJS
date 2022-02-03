@@ -4,10 +4,41 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
-	var suma;
-	var seguir;
-	var numeroIngresado;
+	let numeroIngresado;
+  let seguir;
+  let suma;
+  let contador;
+
+  seguir= true;
+  suma= 0;
+  contador= 0;
+
+  while(seguir == true)
+  {
+    numeroIngresado= prompt("Ingrese un numero");
+    numeroIngresado= parseInt(numeroIngresado);
+   
+    while(numeroIngresado < 0 || numeroIngresado > 100)
+    {
+      numeroIngresado= prompt("Error reingrese un numero");
+      numeroIngresado= parseInt(numeroIngresado);
+    }
+
+    suma= suma + numeroIngresado;
+    contador ++;
+    seguir= confirm("Desea continuar");
+  }
+
+   txtIdSuma.value= suma;
+   txtIdPromedio.value = suma / contador;
+	
+}
+
+/*
+var contador;
+  var suma;
+  var seguir;
+  var numeroIngresado;
 
    suma = 0;
    contador = 0;
@@ -16,7 +47,7 @@ function mostrar()
 
    while( seguir == true)
    {
-   	numeroIngresado = prompt("Ingrese un numero: ");
+    numeroIngresado = prompt("Ingrese un numero: ");
       numeroIngresado = parseInt(numeroIngresado);
    
     while(numeroIngresado < 0 || numeroIngresado > 100 )
@@ -30,16 +61,10 @@ function mostrar()
 
      seguir = confirm("quiere seguir? ");
 
-   }	
+   }  
    txtIdSuma.value= suma;
    txtIdPromedio.value = suma / contador; 
-
-
-	
-}
-
-
-
+*/
 
 
 
@@ -52,14 +77,6 @@ function mostrar()
 
 
 /*
-
-
-
-
-
-
-
-
 
 
 contador = 0;

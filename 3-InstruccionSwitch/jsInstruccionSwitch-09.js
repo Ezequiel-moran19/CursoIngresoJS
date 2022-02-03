@@ -1,4 +1,5 @@
-/*una agencia de viajes debe sacar las tarifas de los viajes ,
+/*una agencia de viajes debe sacar
+ las tarifas de los viajes ,
  se cobra $15.000 por cada estadia como base,
  se pide el ingreso de una estacion
   del año y localidad para vacacionar
@@ -19,7 +20,102 @@ Mar del plata tiene un aumento del 10%
 */
 function mostrar()
 {
-	var estacion;
+	let estacionDelAño;
+    let destino;
+    let descuento;
+    let aumento;
+    let precioFinal;
+    let mensaje;
+    const PRECIO_BASE = 15000;
+
+    estacionDelAño= txtIdEstacion.value;
+    destino= txtIdDestino.value;
+    
+    switch(estacionDelAño)
+    {
+        case "Invierno":
+   
+        if (destino == "Bariloche")
+        {
+           aumento= PRECIO_BASE * 0.20;
+           precioFinal= PRECIO_BASE + aumento;
+        }
+        else
+        {
+            if (destino == "Cataratas" || destino == "Cordoba")
+            {
+                descuento= PRECIO_BASE * 0.10;
+                precioFinal= PRECIO_BASE - descuento;
+            }
+            if(destino == "Mar del plata")
+            {
+                descuento= PRECIO_BASE * 0.20;
+                precioFinal= PRECIO_BASE - descuento;
+            }
+        }
+      break;
+    
+    
+        case "Verano":
+        
+        if (destino == "Bariloche")
+        {
+            descuento= PRECIO_BASE * 0.20;
+            precioFinal= PRECIO_BASE - descuento;       
+        }
+        else
+        {
+            if (destino == "Cataratas" || destino == "Cordoba")
+            {
+                aumento= PRECIO_BASE * 0.10;
+                precioFinal= PRECIO_BASE + aumento;
+            }
+            if(destino == "Mar del plata")
+            {
+                aumento= PRECIO_BASE * 0.20;
+                precioFinal= PRECIO_BASE + aumento;
+            }
+        }
+
+        break;
+
+        case "Otoño":
+        case "Primavera":
+
+        if (destino == "Bariloche" || destino == "Cataratas" || destino == "Mar del plata")
+        {
+            aumento= PRECIO_BASE * 0.10;
+            precioFinal= PRECIO_BASE + aumento;
+        }
+        else
+        {
+            if (destino == "Cordoba")
+            {
+                precioFinal= PRECIO_BASE;
+            }
+        }
+       /* default:
+
+        aumento = PRECIO_BASE * 0.10;
+        precioFinal= PRECIO_BASE + aumento;*/
+
+        break;
+
+     
+   }
+
+
+
+  mensaje= "El precio final es: " + precioFinal;
+
+  alert(mensaje);
+
+
+                   
+}
+
+/*
+var estacion;
     var aumento;
     var destino;
     var descuento;
@@ -99,10 +195,6 @@ function mostrar()
                     mensaje = "el precio final es " + preciofinal;
                     alert(mensaje);
 
-                   
-}
-
-               
-
+*/
 
 

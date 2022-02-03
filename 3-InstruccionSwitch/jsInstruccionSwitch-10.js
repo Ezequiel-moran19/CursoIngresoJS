@@ -1,6 +1,7 @@
 /*
 una agencia de viajes nos piden informar si hacemos viajes a lugares según
- la estación del año estemos, informar si "Se viaja" o "No se viaja" a ese lugar
+ la estación del año estemos, informar si
+  "Se viaja" o "No se viaja" a ese lugar
 
 en Invierno: Solo Bariloche informa "se viaja" los demas destinos "No se viaja"
 
@@ -11,8 +12,78 @@ en Otoño: Se viaja a todos los destinos.
 primavera: solo no se viaja a Bariloche
 */
 function mostrar()
-{
-	var estacion; 
+{ 
+  let destino;
+  let estacionDelAño;
+  let mensaje;
+
+  estacionDelAño= txtIdEstacion.value;
+  destino= txtIdDestino.value;
+  
+
+  switch(estacionDelAño)
+  {
+  	case "Invierno":
+
+  	if (destino == "Bariloche")
+  	{
+  		mensaje= "Se vieja";
+  	}
+  	else
+  	{
+  	 mensaje= "No se viaja";	
+  	}
+
+  	break;
+    
+    case "Verano":
+
+    if(destino == "Mar del plata" || destino == "Cataratas")
+    {
+    	mensaje= "Se viaje";
+    }
+  	else
+  	{ 
+  	 
+  		mensaje= "No se viaja";
+  
+  	}
+
+  	break;
+
+    case "Otoño":
+
+    if (destino)
+    {
+    	mensaje= "Todos los viajes disponibles";
+    }
+    else
+    {
+    	mensaje= "No se viaja";
+    }
+    break;
+
+    case "Primavera":
+
+    if (destino == "Bariloche")
+    {
+    	mensaje= "Se viaja";
+    }
+    else
+    {
+        mensaje= "No se viaja";
+    }
+
+    break;
+     
+
+
+  }
+    alert(mensaje);
+     
+}
+/*
+var estacion; 
 	var destino
     var mensaje;
 
@@ -26,7 +97,7 @@ function mostrar()
 		     if (destino == "Bariloche")
 		    {
 		       mensaje = "se viaja ";
-		    }
+		    }nn
 		    else
 		    {
 		       	mensaje = "no se viaja ";
@@ -75,5 +146,4 @@ function mostrar()
 	       
 	        }
 	         alert(mensaje);
-
-}
+	         */

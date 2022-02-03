@@ -4,7 +4,45 @@
  Norte, Sur, Este u Oeste*/
 function mostrar()
 {
-	var destinoIngresado;
+	let destino;
+	let mensaje;
+
+	destino = txtIdDestino.value;
+
+	switch(destino)
+	{
+		case "Bariloche":
+        
+        mensaje="Oeste";
+
+        break;
+
+        case "Cataratas":
+
+        mensaje= "Norte";
+
+        break;
+
+		case "Mar del plata":
+
+		mensaje= "Este";
+
+		break;
+
+		case "Ushuaia":
+
+		mensaje = "Sur";
+
+		break;
+
+	}
+
+      alert(mensaje);
+
+
+}
+/*
+var destinoIngresado;
 	var mensaje;
 	
 	destinoIngresado =txtIdDestino.value;
@@ -25,5 +63,4 @@ function mostrar()
      break;
 	}
 	alert(mensaje);
-
-}//FIN DE LA FUNCIÓN
+	*/

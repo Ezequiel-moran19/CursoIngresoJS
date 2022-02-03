@@ -1,47 +1,37 @@
 /*
-Al presionar el botón pedir  números  hasta que el usuario quiera,
+Al presionar el botón pedir  números 
+hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
 {
-    var numeroIngresado;
-    var maximo;
-    var minimo;
-    var primerNumero;
-    var seguir;
-
-    seguir = true;
-    primerNumero = false;
-
-    while (seguir == true)
-    {
-        numeroIngresado = prompt("ingrese un numero ");
-        numeroIngresado = parseInt(numeroIngresado);
+    let numeroIngresado;
+    let numMaximo;
+    let numMinimo;
+    let i;
     
-      if (primerNumero == false)
-      {
-         maximo = primerNumero;
-         minimo = primerNumero;
-         primerNumero = true;
-      }
-      else
-      {
-        if (numeroIngresado>maximo)
-        {
-            maximo = numeroIngresado;
-        }
-        else
-        {
-         {
-            if (numeroIngresado<minimo)
-            minimo = numeroIngresado;
-         }
+    i= 0;
 
-        }   
-          seguir = confirm("Ingresar otro?");
-      }
-     }
-      txtIdMaximo.value = maximo;
-      txtIdMinimo.value = minimo;
+    while(i < 5)
+    {
+       numeroIngresado= prompt("Ingrese un numero");
+       numeroIngresado= parseInt(numeroIngresado);
+    
+        if (numeroIngresado > numMaximo || i==0)
+        {
+            numMaximo= numeroIngresado;
+        }
+        
+        if (numeroIngresado < numMinimo || i==0)
+        {
+            numMinimo = numeroIngresado;    
+        }
+        
+     i++;
+
+   }
+
+    document.write("El maximo ingresado es: " + numMaximo +"<br>");
+    document.write("El minimo ingresado es : " + numMinimo);
 
 }
 
@@ -126,4 +116,108 @@ while(seguir == true)
 }
     txtIdMaximo.value = maximo;
     txtIdMinimmo.value = minimo;
+*
+/* Ejemplo numero 2
+ var numeroIngresado;
+    var maximo;
+    var minimo;
+    var primerNumero;
+    var seguir;
+
+    seguir = true;
+    primerNumero = false;
+
+    while (seguir == true)
+    {
+        numeroIngresado = prompt("ingrese un numero ");
+        numeroIngresado = parseInt(numeroIngresado);
+    
+      if (primerNumero == false)
+      {
+         maximo = primerNumero;
+         minimo = primerNumero;
+         primerNumero = true;
+      }
+      else
+      {
+        if (numeroIngresado>maximo)
+        {
+            maximo = numeroIngresado;
+        }
+        else
+        {
+         {
+            if (numeroIngresado<minimo)
+            minimo = numeroIngresado;
+         }
+
+        }   
+          seguir = confirm("Ingresar otro?");
+      }
+     }
+      txtIdMaximo.value = maximo;
+      txtIdMinimo.value = minimo;
 */
+/*
+
+   let numeroIngresado;
+   let minimo;
+   let maximo;
+   let primerNumIngresado;
+   let seguir;
+
+   seguir= true;
+   primerNumIngresado= false;
+
+   while(seguir == true)
+   {
+      numeroIngresado= prompt("Ingrese un numero");
+      numeroIngresado= parseInt(numeroIngresado);
+      
+     if (numeroIngresado > maximo || primerNumIngresado == false)
+     {
+         maximo= numeroIngresado;
+     }
+     if (numeroIngresado < minimo || primerNumIngresado == false)
+     {
+         minimo= numeroIngresado;
+         primerNumIngresado= true;
+     }
+    seguir= confirm("Desea continuar???");
+   }
+
+    document.write("El maximo es: " + maximo + " el minimo es : " + minimo );  
+    */
+    /*
+    let numeroIngresado;
+    let numMaximo;
+    let numMinimo;
+    let primerNumeroIngresado;
+    let seguir;
+
+    seguir = true;
+    primerNumeroIngresado= false;
+
+    while(seguir == true)
+    {
+       numeroIngresado= prompt("Ingrese un numero");
+       numeroIngresado= parseInt(numeroIngresado);
+    
+        if (numeroIngresado > numMaximo || primerNumeroIngresado == false)
+        {
+            numMaximo= numeroIngresado;
+        }
+        
+        if (numeroIngresado < numMinimo || primerNumeroIngresado == false)
+       {
+            numMinimo = numeroIngresado;
+            primerNumeroIngresado= true;
+       }
+        
+     seguir = confirm("Ingresar otro?");
+
+   }
+
+    document.write("El maximo es: " + numMaximo +"<br>");
+    document.write("El minimo es : " + numMinimo);
+    */

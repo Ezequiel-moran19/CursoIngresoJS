@@ -1,6 +1,38 @@
 function mostrar()
 {
-	var contador;
+	let numeroIngresado;
+	let contador;
+	let suma;
+
+
+	contador= 0;
+   suma= 0;
+
+	while(contador < 5)
+	{
+      numeroIngresado= prompt("Ingrese un numero");
+      numeroIngresado= parseInt(numeroIngresado);
+
+      suma += numeroIngresado;
+      contador ++;
+      
+	}
+     txtIdSuma.value= suma;
+     txtIdPromedio.value= suma/contador;
+}
+// 
+/*
+entradas: 5 numeros(dentro)
+
+proceso:
+          sumar los 5 numeros(dentro)
+          calcular el promedio(fuera): suma/cantidad
+
+la suma:  la suma (fuera)
+          el promedio (fuera)         
+*/
+/*
+var contador;
 	var suma;
 	var promedio;
 	var numeroIngresado;
@@ -23,15 +55,24 @@ function mostrar()
    }
 	txtIdSuma.value= suma;
 	txtIdPromedio.value= suma/contador;
-}
+	*/
+	/*
+	let numeroIngresado;
+	let suma; 
+	let contador;
 
-/*
-entradas: 5 numeros(dentro)
+	contador= 0;
+	suma= 0;
 
-proceso:
-          sumar los 5 numeros(dentro)
-          calcular el promedio(fuera): suma/cantidad
+	while(contador < 5)
+	{	
+	   numeroIngresado= prompt("Ingrese un numero");
+	   numeroIngresado= parseInt (numeroIngresado);
 
-la suma:  la suma (fuera)
-          el promedio (fuera)         
-*/
+	   suma += numeroIngresado;
+	   contador ++;
+	}
+    
+    txtIdSuma.value= suma;
+	 txtIdPromedio.value= suma/contador
+	 */

@@ -6,21 +6,24 @@ en el cuadro de texto "RESULTADO"*/
 //tp 10 bis
 function mostrarAumento()
 {
-    var importeIngresado;
-    var descuentoIngresado;
-    var resultado;
+   let importe;
+   let descuento;
+   let resultado;
 
-    importeIngresado = txtIdImporte.value;
-    importeIngresado = parseInt(importeIngresado);
-    descuentoIngresado = prompt(" Ingrese el porcentaje de descuento ");
-    descuentoIngresado = parseInt(descuentoIngresado);
-    
-    descuentoIngresado = importeIngresado * descuentoIngresado/100;
-    resultado = importeIngresado - descuentoIngresado;
+   importe= parseInt(importe);
 
-    txtIdResultado.value = resultado;
+   importe= txtIdImporte.value;
+
+   descuento= importe * 0.25;
+
+   resultado= importe - descuento;
+
+   txtIdResultado.value= resultado;
+
+
+
 }
-
+// txtIdImporte txtIdResultado
 
 /*
     var importe;
@@ -34,7 +37,7 @@ function mostrarAumento()
     importe=parseInt(importe);
     //parseo el importe
 
-    descuento= importe * 0.25;
+    descuento= importe - 0.25;
     //de esta manera multiplico el importe por el 0.25 ---> (25%) 
 
    resultado= importe - descuento;
@@ -43,4 +46,19 @@ function mostrarAumento()
    document.getElementById ("txtIdResultado").value = resultado
   // para que resultado impacte en el input tengo que poner el resultado al final
   
+
+
+   var importeIngresado;
+    var descuentoIngresado;
+    var resultado;
+
+    importeIngresado = txtIdImporte.value;
+    importeIngresado = parseInt(importeIngresado);
+    descuentoIngresado = prompt(" Ingrese el porcentaje de descuento ");
+    descuentoIngresado = parseInt(descuentoIngresado);
+    
+    descuentoIngresado = importeIngresado * descuentoIngresado/100;
+    resultado = importeIngresado - descuentoIngresado;
+
+    txtIdResultado.value = resultado;
   */
