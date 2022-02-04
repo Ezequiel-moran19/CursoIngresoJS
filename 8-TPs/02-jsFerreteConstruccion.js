@@ -48,14 +48,11 @@ function Materiales ()
     let ancho;
     let largo;
 
-    largo= txtIdLargo.value;
-    ancho= txtIdAncho.value;
+    largo= document.getElementById("txtIdLargo").value;
+    ancho= document.getElementById("txtIdAncho").value;
     
     largo= parseInt(largo);
     ancho= parseInt(ancho);
-    bolsaCemento= parseInt(bolsaCemento);
-    bolsaCal= parseInt(bolsaCal);
-
 
     piso= largo * ancho;
     bolsaCal= piso * 3;

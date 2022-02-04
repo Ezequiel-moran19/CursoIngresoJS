@@ -1,67 +1,37 @@
 /*3.	Para el departamento de Pinturas:
-A.	Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado 
+A.	Al ingresar una temperatura en Fahrenheit debemos mostrar
+ la temperatura en Centígrados con un mensaje concatenado 
 (ej.: " 32 Fahrenheit son 0 centígrados").
-B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en Fahrenheit (ej.: "0  centígrados son 32 Fahrenheit ").
+B.	Al ingresar una temperatura en Centígrados debemos mostrar
+ la temperatura en Fahrenheit (ej.: "0  centígrados son 32 Fahrenheit ").
 */
 function FahrenheitCentigrados () 
 {
-	let centigrados;
-	let fahrenheit;
-	let resultado;
+	let temFahrenheit;
+	let grados;
 
-	fahrenheit = parseInt(fahrenheit);
-    centigrados = parseInt(centigrados);
+    temFahrenheit= txtIdTemperatura.value;
 
-    fahrenheit= fahrenheit - 32;
-    centigrados= 5 / 9.0;
-    resultado= (fahrenheit -32) * 5 / 9.0;
+    temFahrenheit= parseInt(temFahrenheit);
 
-    document.write("32 fahrenheit son " + resultado + " centigrados ");
-
-
-}
-
-// txtIdTemperatura
-
-/*var fahrenheit;
-	var resultado;
-
-	resultado = txtIdTemperatura.value; 
+    grados= (temFahrenheit - 32) * 5 / 9;
     
-    fahrenheit = parseInt(fahrenheit);
-    grados = parseInt(grados);    
+    alert("la temperatura Fahrenheit equivale a: " + grados + " centígrados");
     
-    fahrenheit = fahrenheit - 32;
-	grados =  5 / 9.0;
-	resultado = (fahrenheit - 32) *5 / 9.0;
-
-	alert("32 fahrenheit son " + resultado + " centigrados ");
-*/
-/*
-	var grados;
-	var resultado;
-
-	grados = txtIdTemperatura.value;
-
-    grados = parseInt(grados);
-
-	resultado = (grados - 32 ) * 5 /9.0;
-	
-	alert(grados + " fahrenheit son " + resultado + " centigrados");
-
-	
 }
-
-function CentigradosFahrenheit () 
+function CentigradosFahrenheit ()
 {
-	var grados;
-	var resultado;
+   let celsius;
+   let fahrenheit;
+     
+    celsius = txtIdTemperatura.value;
 
-	grados = txtIdTemperatura.value;
+    celsius= parseInt(celsius);
 
-    grados = parseInt(grados);
+    celsius=((celsius * 9)/5) + 32;
+	 
+	 
+	 alert("Los centígrados son equivalente a: " + celsius + " fahrenheit");
+  
 
-	resultado = (grados * 5 /9.0) + 32;
-	
-	alert(resultado + " centigrados son "  + grados + " fahrenheit ");
-*/
+}
