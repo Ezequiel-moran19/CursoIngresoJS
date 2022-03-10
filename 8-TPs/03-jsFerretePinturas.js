@@ -16,7 +16,7 @@ function FahrenheitCentigrados ()
 
     grados= (temFahrenheit - 32) * 5 / 9;
     
-    alert("la temperatura Fahrenheit equivale a: " + grados + " centígrados");
+    alert("la temperatura Fahrenheit equivale a: " + grados.toFixed(2) + " centígrados");
     
 }
 function CentigradosFahrenheit ()
@@ -31,7 +31,7 @@ function CentigradosFahrenheit ()
     celsius=((celsius * 9)/5) + 32;
 	 
 	 
-	 alert("Los centígrados son equivalente a: " + celsius + " fahrenheit");
+	 alert("Los centígrados son equivalente a: " + celsius.toFixed(2) + " fahrenheit");
   
 
 }

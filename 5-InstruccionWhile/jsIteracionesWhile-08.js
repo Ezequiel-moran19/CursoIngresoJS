@@ -6,12 +6,12 @@ sumar los que son positivos y
 function mostrar()
 {
 	let numeroIngresado;
-	let positivos;
-	let negativos;
+	let acumuladorPositivos;
+	let acumuladorNegativos;
    let seguir;
    
-   positivos= 0;
-   negativos= 1;
+   acumuladorPositivos= 0;
+   acumuladorNegativos= 1;
    seguir= true;
 
    while(seguir== true)
@@ -21,19 +21,18 @@ function mostrar()
 
       if (numeroIngresado > 0)
       {
-          positivos= positivos + numeroIngresado;
+          acumuladorPositivos= acumuladorPositivos + numeroIngresado;
       }
       else
       {
-      	 negativos= negativos * numeroIngresado;
+      	 acumuladorNegativos= acumuladorNegativos * numeroIngresado;
       }
 
    	seguir= confirm("Agregar mas numeros?");
    }
 
-   txtIdSuma.value= positivos;
-   txtIdProducto.value= negativos;
-
+   txtIdSuma.value=acumuladorPositivos;
+	txtIdProducto.value=acumuladorNegativos;
 }
 /*
 var numeroIngresado;

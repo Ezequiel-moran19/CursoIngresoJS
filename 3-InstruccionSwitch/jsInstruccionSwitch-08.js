@@ -9,42 +9,29 @@ function mostrar()
 	{
     case "Cataratas":
 
-    mensaje= "hace calor";
+	    mensaje= "hace calor";
 
     break;
 
     case "Bariloche":
 
-    mensaje= "hace frio";
+	    mensaje= "hace frio";
 
     break;
 
     case "Ushuaia":
 
-    mensaje= "hace frio";
+	    mensaje= "hace frio";
 
     break;
 
     case "Mar del plata":
 
-    mensaje= "hace calor";
+	    mensaje= "hace calor";
 
     break;
-
-
 	}
-
    alert(mensaje);
-
-
-
-
-
-
-
-
-
-
 }
 /*
 var destinoIngresado;

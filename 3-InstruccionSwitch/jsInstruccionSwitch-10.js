@@ -24,60 +24,47 @@ function mostrar()
   switch(estacionDelAño)
   {
   	case "Invierno":
-
-  	if (destino == "Bariloche")
-  	{
-  		mensaje= "Se vieja";
-  	}
-  	else
-  	{
-  	 mensaje= "No se viaja";	
-  	}
-
-  	break;
-    
+         switch(destino)
+         {
+         	  case "Bariloche":
+                 mensaje= "Se vieja";
+         	  break;
+         	  default:
+         	       mensaje= "No se viaja";
+         	  break;
+         }
+    break;
     case "Verano":
-
-    if(destino == "Mar del plata" || destino == "Cataratas")
-    {
-    	mensaje= "Se viaje";
-    }
-  	else
-  	{ 
-  	 
-  		mensaje= "No se viaja";
-  
-  	}
-
-  	break;
-
+         switch(destino)
+         {
+         	  case "Mar del plata":
+         	  case "Cataratas":
+                 mensaje= "Se viaje";
+         	  break;
+         	  default:
+         	       mensaje= "No se viaja";
+         	  break;
+         }
+    break; 
     case "Otoño":
-
-    if (destino)
-    {
-    	mensaje= "Todos los viajes disponibles";
-    }
-    else
-    {
-    	mensaje= "No se viaja";
-    }
+         switch(destino)
+         { 
+         	  default:
+         	       mensaje= "Todos los viajes disponibles";
+         	  break;
+         }
     break;
-
     case "Primavera":
-
-    if (destino == "Bariloche")
-    {
-    	mensaje= "Se viaja";
-    }
-    else
-    {
-        mensaje= "No se viaja";
-    }
-
+         switch(destino)
+         {
+            case "Bariloche":
+                 mensaje= "Se viaja";
+            break;
+            default:
+                 mensaje= "No se viaja";
+            break;           
+         }
     break;
-     
-
-
   }
     alert(mensaje);
      

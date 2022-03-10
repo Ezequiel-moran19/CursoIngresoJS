@@ -15,150 +15,97 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros,
  */
 function ComenzarIngreso () 
 {
- 	//definicion de variables
- 	var edad;
-    var sexIng;
-    var estCivil;
-    var salario;
-    var legajo;
-    var nacionalidad;
+   let datosValidos;
+   let edadIngresada;
+   let sexoIngresado;
+   let estadoCivil;
+   let sueldoBruto;
+   let numeroLegajo;
+   let nacionalidad;
 
-    edad = prompt("Ingrese su edad ");
- 	edad = parseInt(edad);
-    sexIng = prompt("ingrese sexo ");
-    estCivil = prompt("Ingrese su estado civil ");
-    salario = prompt("su sueldo es ");
-    salario = parseInt(salario);
-    legajo = prompt("Ingrese el numero de legajo ");
-    legajo = parseInt(legajo);
-    nacionalidad = prompt("Ingrese su nacionalidad ");
-
-    while (edad < 18 || edad > 90)// Primer dato...
-    {
-       edad = prompt("Error, reingrese su edad ");  
-       
-    }
-     txtIdEdad.value= edad;
-
-    while (sexIng != 'f' && sexIng != 'm')// Segundo dato...
-    {
-        sexIng= prompt("Error, reingrese su sexo ");
-    }
-
-         if (sexIng =='f')  
-         {   
-            txtIdSexo.value = "femenino";
-         }
-         else
-         {
-            txtIdSexo.value = "masculino";
-         }
-
-    while (estCivil != 1 && estCivil != 2 && estCivil != 3 && estCivil != 4)// Tercer dato....
-    {
-        estCivil= prompt("Error, reingrese su estado civil ");
-    }
-        if (estCivil == 1) 
+          edadIngresada= prompt("Ingrese su edad");
+          
+       while(edadIngresada < 18 || edadIngresada > 90)
+       {
+          edadIngresada= prompt("Error... reingrese una edad entre: (18 y 90)");
+       }
+           sexoIngresado= prompt('"Ingrese el genero: "f" o "m"');
+        
+        while(!(sexoIngresado == "f" || sexoIngresado == "F" || sexoIngresado == "m" || sexoIngresado == "M"))
         {
-           txtIdEstadoCivil.value = "soltero";
+           sexo= prompt('"Error... reingrese el genero: "f" o "m"');
         }
-         if (estCivil == 2) 
+        if (sexoIngresado == "m" )
         {
-           txtIdEstadoCivil.value = "casados";
-        }
-         if (estCivil == 3) 
-        {
-           txtIdEstadoCivil.value = "divorciados";
+           sexoIngresado= "masculino";
         }
         else
         {
-           txtIdEstadoCivil.value = "viudos";
+           sexoIngresado= "femenino";
         }
-        
-    while (salario <= 8000)// cuarto dato...
-    {
-       salario= prompt("Error, reingrese el sueldo ");
- 
-    } 
-         txtIdSueldo.value= salario;
-
-    while (legajo <= 1000)// Quarto dato...
-    {
-       legajo= prompt("Error, reingrese el numero legajo ");
- 
-    } 
-         txtIdLegajo.value= legajo;
-
-    while (nacionalidad != 'a' && nacionalidad != 'b' && nacionalidad != 'n')// Sexto dato...
-    {
-        nacionalidad= prompt("Error, reingrese su nacionalidad ");
-    }
-
-       if (nacionalidad =='a')  
-       {   
-           txtIdNacionalidad.value = "Argentino";
-       }
-       else
-       {
-        if (nacionalidad =='b')
+           estadoCivil= prompt("Ingrese su estado civil: 1-soltero, 2-casados, 3-divorciados o 4-viudos");
+           
+        while(!(estadoCivil == 1 || estadoCivil == 2 || estadoCivil == 3 || estadoCivil == 4))
         {
-           txtIdNacionalidad.value = "Extranjeros";
+           estadoCivil= prompt("Ingrese el estado civil correspondiente: soltero, casados, divorciados o viudos");
+        }
+        if (estadoCivil == 1)
+        {
+            estadoCivil= "Soltero"
+        }else
+            if (estadoCivil == 2)
+            {
+                estadoCivil == "casados"
+            }else
+                if (estadoCivil == 3)
+                {
+                    estadoCivil= "divorciados"
+                }
+                else
+                {
+                    estadoCivil= "viudos"
+                }
+
+           sueldoBruto= prompt("Ingrese su sueldo bruto");
+
+        while(sueldoBruto < 8000)
+       {
+          sueldoBruto= prompt("Error... el sueldo no puede ser menor que: 8000");
+       }
+          numeroLegajo= prompt("Ingrese número de legajo, numérico de 4 cifras, sin ceros a la izquierda ");
+
+        while(numeroLegajo < 1000 || numeroLegajo > 9999)
+        {
+            numeroLegajo= prompt("Error... reingrese número de legajo, numérico de 4 cifras ");
+        }
+          nacionalidad= prompt("Ingrese su nacionalidad");
+
+        while(nacionalidad != "a" && nacionalidad != "e" && nacionalidad != "n")
+       {
+          nacionalidad= prompt("Error... ingrese la nacionalidad correspondiente");
+       }  
+       if (nacionalidad == "a")
+       {
+          nacionalidad= "Argentino";
        }
        else
-       {
-           txtIdNacionalidad.value = "Nacionalizados";
-        }
-        
-       }
+          if(nacionalidad == "e")
+          {
+            nacionalidad= "Extranjeros";
+          }
+          else
+          {
+            nacionalidad= "nacionalizados";
+          }
+         
+      txtIdEdad.value= edadIngresada;
+      txtIdSexo.value= sexoIngresado;
+      txtIdEstadoCivil.value= estadoCivil;
+      txtIdSueldo.value= sueldoBruto;
+      txtIdLegajo.value= numeroLegajo;
+      txtIdNacionalidad.value= nacionalidad;
+}
+ 
+
 
       
-   
-     
-
-
-
-}
- /*  
-txtIdNacionalidad
-txtIdLegajo
-
-  var sexo;
-    var estadoCivil;
-    var sueldoBruto;
-    var legajo;
-    var nacionalidad;
-
-   /* edad = txtIdEdad.value;
-    edad = parseInt(edad);
-    while(edad )
-
-    var f;
-    var m;
-    sexo = prompt("ingrese f ó m ");
-
-    while (sexo= !=m || !=f)
-    {
-       document.getElementById("txtIdSexo").value = sexo; 
-
-    }
-
-    
-
-
-
-    estadoCivil = txtIdEstadoCivil.value;
-    sueldoBruto = txtIdSueldo.value;
-    legajo = txtIdLegajo.value;
-    nacionalidad = txtIdNacionalidad.value;
-
-    
-    sueldoBruto = parseInt(sueldoBruto);
-*/
-
-/* 
-    edad = txtIdEdad.value;
-    edad = parseInt(edad);
-    estCivil = estadoCivil.value;
-
-    if (edad > 18 && estCivil == 'Soltero') 
-*/

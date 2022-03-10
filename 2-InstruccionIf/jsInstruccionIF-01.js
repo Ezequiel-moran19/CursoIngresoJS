@@ -8,16 +8,6 @@ function mostrar()
 
    	alert("niña bonita");
    }
-
-
- 
-
-
-
-
-
-
-
 }
 
 

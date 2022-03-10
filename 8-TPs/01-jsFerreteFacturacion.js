@@ -21,8 +21,6 @@ function Sumar ()
    suma= precioProducto1 + precioProducto2 + precioProducto3;
 
    alert("La suma de precios es: " + suma);
-
-
 }
  
 function Promedio () 
@@ -67,44 +65,3 @@ function PrecioFinal ()
    precioFinal= suma + (suma * 0.21);
    alert("El precio final mas iva es: " + precioFinal);
 } 
-
-/*
-var producto1 ;
-   var producto2;
-   var producto3;
-   var suma;
-   var promedio;
-   // declaro valores
-
-    producto1=parseInt(document.getElementById("txtIdPrecioUno").value);
-    producto2=parseInt(document.getElementById("txtIdPrecioDos").value);
-    producto3=parseInt(document.getElementById("txtIdPrecioTres").value);
-   //a traves de document traemos en input para luego parsearlo
-    
-
-   suma= producto1 + producto2 + producto3;
-   promedio= suma /3;
-   //promedio de los tres productos
-   
-   alert("El promedio de los tres productos es: " + promedio );
-*/
-/*
- var producto1 ;
-   var producto2;
-   var producto3;
-   var preciofinal;
-   // declaro valores
-
-    producto1=parseInt(document.getElementById("txtIdPrecioUno").value);
-    producto2=parseInt(document.getElementById("txtIdPrecioDos").value);
-    producto3=parseInt(document.getElementById("txtIdPrecioTres").value);
-   //a traves de document traemos en input para luego parsearlo
-    
-
-    
-    suma= producto1 + producto2 + producto3 ;
-    preciofinal= (suma * 0.21)  + suma;
-   //promedio de los tres productos
-   
-   alert("El prescio final es: " + preciofinal );
-   */

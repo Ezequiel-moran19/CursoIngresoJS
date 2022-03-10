@@ -1,13 +1,11 @@
 function mostrar()
 {
 	
-   let numero;
+   let numeroAleatorio;
    
-   numero= parseInt(numero);
+   numeroAleatorio = Math.floor(Math.random() * 10) + 1;
 
-   numero = Math.round(Math.random() * 10) + 1;
-
-   alert(numero);
+   alert(numeroAleatorio);
 
 
 

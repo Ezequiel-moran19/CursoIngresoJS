@@ -11,105 +11,102 @@ e) El promedio de edad entre los hombres solteros.
 
 function mostrar()
 {
+    let nombre;
+    let edad;
+    let genero;
+    let estadoCivil;
+    let temperaturaCorporal;
+    let maximaTemperatura;
+    let nombreMaximaTemperatura;   
+    let contadorHombresViudos= 0;
+    let contadorViudos= 0;
+    let contadorPersonasConFiebre= 0;
+    let contadorEdadSolteros= 0;
+    let acumuladorEdadSolteros= 0;
+    let contadorSolteros= 0;
+    let banderaMaximaTemperatura= false;
+    let seguir= true;
 
-	var nombre;
-	var edad;
-	var sexo;
-	var estadoCivil;
-	var temperatura;
-
-	var contadorMayoresEdadViudo;
-	var contadorTerceraEdadConTemperatura;
-	var contadorHombresSolterosOViudos;
-	var contadorHombresSolteros;
-
-
-	var acumuladorEdad;
-	var banderaMayorTemperatura;
-	var mayorTemperatura;
-	var nombreMayorTemperatura;
-	var seguir;
-
-	contadorMayoresEdadViudo =0;
-	contadorTerceraEdadConTemperatura =0;
-	contadorHombresSolterosOViudos =0;
-	contadorHombresSolteros =0;
-	mayorTemperatura =0;
-	acumuladorEdad =0;
-	seguir=true;
-	banderaMayorTemperatura=true;
-
-
-while(seguir==true) 
-   {
-   	 nombre= prompt("Ingrese un nombre: ");
-
-   	 edad= prompt("Ingrese la edad");
-     edad= parseInt(edad);
-      while(edad <=0)
-      {
-        edad= prompt("Error, reingrese un valor válido");
-        edad= parseInt(edad);
-      }
-      sexo= prompt("Ingrese el sexo: f o m ");
-      while(sexo !="f" && sexo !="m")
-      {
-        sexo= prompt("Error, reingrese el sexo");
-      }
+    while(seguir== true)
+    {   
         
-      estadoCivil= prompt("Ingrese el estado civil: ");
-          while(estadoCivil !="soltero" && estadoCivil !="casado" && estadoCivil !="viudo")
-      {
-        estadoCivil= prompt("Error, reingrese el estado civil");
-      }
+        nombre= prompt("Ingrese el nombre ");
+        
+        edad= prompt("Ingrese la edad");
+        edad= parseInt(edad);
+        while(isNaN(edad) || edad < 0)
+        {
+            edad= prompt("Error. reingrese la edad");
+            edad= parseInt(edad);
+        }
+        genero= prompt("Ingrese el genero");
+        while(genero != "f" && genero != "m")
+        {
+            genero= prompt("Error. reingrese el genero");
+        }
+        estadoCivil= prompt("Ingrese el estado Civil");
+        while(estadoCivil != "soltero" && estadoCivil != "casado" && estadoCivil != "viudo")
+        {
+            estadoCivil= prompt("Error. reingrese el estado Civil");
+        }
+        temperaturaCorporal= prompt("Ingrese la temperatura corporal ");
+        temperaturaCorporal= parseInt(temperaturaCorporal);
+        while(isNaN(temperaturaCorporal) || temperaturaCorporal < 35 || temperaturaCorporal > 41)
+        {
+            temperaturaCorporal= prompt("Error. reingrese la temperatura corporal");
+            temperaturaCorporal= parseInt(temperaturaCorporal);
+        } 
+         
+         if (temperaturaCorporal > maximaTemperatura || banderaMaximaTemperatura== false)
+         {
+            maximaTemperatura= temperaturaCorporal;
+            nombreMaximaTemperatura= nombre;
+            banderaMaximaTemperatura= true;
+         }
+         
+        switch(estadoCivil)
+        {
+            case "soltero":
+            acumuladorEdadSolteros= edad;
+            contadorEdadSolteros++;
+                  if (genero == "m") 
+                  {   
+                     contadorSolteros++;
+                  }
+            break;
+            
+            case "viudo":         
+                 if (genero == "m")
+                 {
+                    contadorHombresViudos++;
+                 }
+                 if (edad > 18)
+                 { 
+                    contadorViudos++;
+                 }
+            break;  
+      
+         }
 
-      temperatura= prompt("Ingrese la temperatura");
-      temperatura= parseInt(temperatura);
+         if (edad > 60)
+         {
+            if (temperaturaCorporal > 38) 
+            {
+               contadorPersonasConFiebre++;
+            }
+         }
+            
+    seguir= confirm("Desea continuar?");
+    }//CIERRE DEL while
 
-      //DENTRO DEL WHILE, por cada persona ingresada, valido si tiene la mayor temperatura.
-
-       if (temperatura > mayorTemperatura || banderaMayorTemperatura == true) //El nombre de la persona con mas temperatura.
-              {
-                 mayorTemperatura= temperatura;
-                 nombreMayorTemperatura = nombre;
-                 banderaMayorTemperatura = false;
-
-              }
- 
-            if(edad>=18 && estadoCivil =="viudo" ) //b) Cuantos mayores de edad estan viudos
-            {	
-				contadorMayoresEdadViudo ++;
-            } 
-
-               if(estadoCivil !="casado" && sexo == "m") //c) La cantidad de hombres que hay solteros o viudos.
-            {	
-				contadorHombresSolterosOViudos ++;
-            } 
-
-              if(edad >=60 && temperatura >=38) //d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
-            {	
-				contadorTerceraEdadConTemperatura ++;
-            } 
-
-           
-             if(sexo == "m" && estadoCivil =="soltero")  //e) El promedio de edad entre los hombres solteros.
-            {	
-				acumuladorEdad = acumuladorEdad + edad;
-				contadorHombresSolteros ++;
-
-            } 
-
- 	seguir= confirm("Quiere seguir? ");
-
-   }//CIERRA EL WHILE GENERAL
-
-   //muestro por fuera del while gral la cantidad de mayores de edad viudos
-
-   document.write("La persona con mayor temperatura es : " + nombreMayorTemperatura+ " con una temperatura de: " + mayorTemperatura +  "<br>"); 
-   document.write("La cantidad de mayores de edad viudos es : " + contadorMayoresEdadViudo + "<br>"); 
-   document.write("La cantidad de hombres que hay solteros o viudos es : " + contadorHombresSolterosOViudos + "<br>"); 
-   document.write("La cantidad de personas de la tercera edad con mas de 38 de temperatura es : " + contadorTerceraEdadConTemperatura + "<br>"); 
-   document.write("El promedio de edad entre los hombres solteros : " +  acumuladorEdad / contadorHombresSolteros + "<br>"); 
+    document.write("El nombre de la persona con mas temperatura: " + nombreMaximaTemperatura + "<br>");
+    document.write("Cuantos mayores de edad estan viudos: " + contadorViudos + "<br>");
+    //c) La cantidad de hombres que hay solteros o viudos.
+    document.write("La cantidad de hombres que hay solteros: " + contadorSolteros + " viudos "+ contadorHombresViudos + "<br>");
+    document.write("Personas de la tercera edad que tienen mas de 38 de temperatura: " + contadorPersonasConFiebre + "<br>");
+    document.write("El promedio de edad entre los hombres solteros " + (contadorEdadSolteros / acumuladorEdadSolteros) + "<br>");
+    
+   
+}
 
 
-}//FIN FUNCTION

@@ -1,11 +1,9 @@
 function mostrar()
 {
-	
 	let mes;
    let mensaje;
 
    mes= txtIdMes.value;
-
 
    switch(mes)
    { 
@@ -39,9 +37,6 @@ function mostrar()
    mensaje="No hay nada en esta mes";
 
    break;
-
-  
-
  }
     alert(mensaje);
 }

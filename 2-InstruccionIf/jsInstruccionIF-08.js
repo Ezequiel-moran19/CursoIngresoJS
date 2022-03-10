@@ -1,12 +1,12 @@
 function mostrar()
 {
 	let edad;
-	let estadCilvil;
+	let estadcilvil;
 
 	edad= txtIdEdad.value;
-	estadCilvil= estadoCivil.value;
+	estadcilvil= estadoCivil.value;
 
-	if (edad > 18 && estadCilvil == "Soltero")
+	if (estadcilvil > 18 && estadcilvil == "Soltero")
 	{
 		alert("Es soltero y no es menor");
 	}

@@ -9,10 +9,63 @@
 */
 function mostrar()
 {
-	let mesDelAño;
+    let mesesDelAño;
+    let mensaje;
+
+    mesesDelAño= document.getElementById("txtIdMes").value;
+
+    switch(mesesDelAño)
+    {
+       case "Marzo":
+       case "Abril":
+       case "Mayo":
+       case "Junio":
+              mensaje= "Falta para el invierno";
+       break;
+
+       case "Julio":
+       case "Agosto":
+              mensaje= "abrigate que hace frio";      
+       break;
+
+       default:
+              mensaje= "ya pasamos el frio, ahora hace calor";
+       break;
+    }
+    alert(mensaje);
+
+}//FIN DE LA FUNCIÓN
+/*
+var mesDelAño;
+   var mensaje;
+   mesDelAño =txtIdMes.value;
+   
+    switch(mesDelAño)
+    {
+        case "Marzo":
+        case "Abril":
+        case "Mayo":
+        case "Junio":
+         mensaje = "falta para el invierno";
+        break;
+         
+        case "Julio":
+        case "Agosto":   
+           mensaje = "falta para el invierno";
+        break;
+
+        default:
+           mensaje = "ya pasamos el frio, ahora hace calor";
+        break;
+
+    }
+      alert(mensaje);
+   
+*/
+/*let mesDelAño;
    let mensaje;
 
-   mesDelAño= txtIdMes.value;
+   
 
    switch(mesDelAño)
    { 
@@ -50,38 +103,8 @@ function mostrar()
 
      alert(mensaje);
 
-
-
-
-
-
-
-
-}//FIN DE LA FUNCIÓN
-/*
-var mesDelAño;
-   var mensaje;
-   mesDelAño =txtIdMes.value;
-   
-    switch(mesDelAño)
-    {
-        case "Marzo":
-        case "Abril":
-        case "Mayo":
-        case "Junio":
-         mensaje = "falta para el invierno";
-        break;
-         
-        case "Julio":
-        case "Agosto":   
-           mensaje = "falta para el invierno";
-        break;
-
-        default:
-           mensaje = "ya pasamos el frio, ahora hace calor";
-        break;
-
-    }
-      alert(mensaje);
-   
 */
+
+
+
+

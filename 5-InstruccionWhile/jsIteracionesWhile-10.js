@@ -11,9 +11,16 @@ hasta que el usuario quiera, mostrar:
 8-Promedios de negativos.
 9-Diferencia entre positivos y negativos, (positvos-negativos).
 */
+/*
+bis
+10-Maximo de los valores ingresados.
+11-minimo de los positivos.
+_________________________________________________________________
+*/
+//10 BIS REALIZADO EL 17/02/2022 FALTA CHEQUEAR
 function mostrar()
 {
-	 let numeroIngresado;
+   let numeroIngresado;
    let sumaNegativos;
    let sumaPositivos;
    let cantidadPositivos;
@@ -24,7 +31,12 @@ function mostrar()
    let promedioNegativos;
    let diferencia;
    let seguir;
+   
+   let maximoDeLosValores;//10)
+   let minimoPositivos;//11)
+   let bandera;
 
+   bandera= true;
    sumaNegativos= 0;
    sumaPositivos= 0;
    cantidadPositivos= 0;
@@ -64,14 +76,22 @@ function mostrar()
     {
       cantidadPares ++;
     }
+    if (numeroIngresado > maximoDeLosValores || bandera == false)
+    {
+        maximoDeLosValores= numeroIngresado;
+        bandera= true;
+    }
 
-
+    if (numeroIngresado < minimoPositivos || bandera == false)
+    {
+       minimoPositivos= numeroIngresado;
+       bandera= true;
+    }
+//10-Maximo de los valores ingresados.
+//11-minimo de los positivos.
       seguir= confirm("Quiere agregar mas numeros??");
-   }
-     
-     
+   }  
      diferencia= sumaPositivos - sumaNegativos;
-
 
    document.write("La suma de  los positivos es: " + sumaPositivos + "<br>");
    document.write("La suma de  los negativos es: " + sumaNegativos + "<br>");
@@ -100,19 +120,9 @@ function mostrar()
      document.write("No se pudo calcular el promedio de negativos <br>");
    }
    document.write("La diferencia entre positivos y negativos es: " + diferencia + "<br>");
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
+   document.write("Maximo de los valores ingresados es: " + maximoDeLosValores + "<br>");
+   document.write("minimo de los positivos es: " + minimoPositivos);
 
 }
 /*

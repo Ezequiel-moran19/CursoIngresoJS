@@ -11,6 +11,54 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function NumerosPares () 
 {
+   let numIngresado;
+   let diferencia;
+   let cantPares;
+
+   cantPares= 0;
+   
+   numIngresado=txtIdNumero.value;
+   numIngresado=parseInt(numIngresado);
+  
+   diferencia= numIngresado;
+ 	
+ 	while (numIngresado < 0)
+ 	{ 
+ 		numIngresado= prompt("Error, ingrese un numero positivo");
+ 		numIngresado=parseInt(numIngresado);
+ 	}	
+    if(numIngresado % 2 ==0) // quiere decier que es par
+    {
+      while(diferencia >= 0)
+      {
+      	cantPares ++;
+      	diferencia = diferencia - 2;
+      }
+ 
+    }  
+   
+   alert("la cantidad de numeros pares es: " + cantPares);
+
+}  //txtIdNumero
+function NumerosImpares()
+{
+  
+}
+function NumerosDivisibles()
+{
+
+}
+
+
+function VerificarPrimo()
+{
+  
+
+
+}
+
+//funcion pares
+/*
 	var numeroIngresado;
  	var cantPares;
  	var diferencia;
@@ -35,12 +83,9 @@ function NumerosPares ()
       }
       alert("La cantidad de numeros pares es " + cantPares);
     }
-    
-
- }  
-function NumerosImpares()
-{
-    var numeroIngresado;
+ */   
+//funcion inpares
+ /* var numeroIngresado;
  	var cantImpares;
  	var diferencia;
 
@@ -64,11 +109,8 @@ function NumerosImpares()
       }
       alert("La cantidad de numeros Impares es " + cantImpares);
     }
-
-}
-function NumerosDivisibles()
-{
-   var numeroIngresado;
+    //funcion divisores
+    /* var numeroIngresado;
    var divisor;
    var contadorDivisores;
 
@@ -106,12 +148,9 @@ function NumerosDivisibles()
  	}
  	
      alert("La cantidad de numeros divisibles es " + contadorDivisores);
-}
-
-
-function VerificarPrimo()
-{
-   var numeroIngresado;
+   */  
+   //funcion verificar primos
+   /* var numeroIngresado;
    var divisor;
    var contadorDivisores;
 
@@ -154,10 +193,7 @@ function VerificarPrimo()
 	        }
 
 	 }
-	 	
-
-
-}
+*/ 	
 
 
 	 

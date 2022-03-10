@@ -8,7 +8,7 @@ function mostrar()
 	{
 		alert("Esta persona es mayor");
 	}
-	else(edad < 17)
+	else
 	{
         alert("Esta persona es menor");
 	}
