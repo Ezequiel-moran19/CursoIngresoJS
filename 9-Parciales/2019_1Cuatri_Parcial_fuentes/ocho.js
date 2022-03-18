@@ -40,12 +40,9 @@ function mostrar()
    contadorPares= 0;
    contadorImpares= 0;
    contadorCeros= 0;
-
    acumuladorPositivos= 0;
    contadorPositivos= 0;
-
    acumuladorNegativos= 0;
-   
    seguir= true;
    bandera= false;
    while (seguir== true)
@@ -62,35 +59,28 @@ function mostrar()
      //a) La cantidad de números pares.
      if (numIngresado % 2 == 0)
      {
-     	contadorPares++;
+     	   contadorPares++;
      }
-     else
-     {//b) La cantidad de números impares
-        	if (numIngresado % 2 == 1)
-        	{
-        		contadorImpares++;
-        	}        	
-     }
-     //d) El promedio de todos los números positivos ingresados.
-     if (numIngresado > 0)
+     else if (numIngresado % 2 == 1)//b) La cantidad de números impares
+     {
+     		contadorImpares++;
+     }        	
+     
+     if (numIngresado > 0)//d) El promedio de todos los números positivos ingresados.
      {
         acumuladorPositivos= acumuladorPositivos + numIngresado;
         contadorPositivos++;
      }
-     else
+     else if (numIngresado < 0)//e) La suma de todos los números negativos.
      {
-         if (numIngresado < 0)//e) La suma de todos los números negativos.
-         {
-           acumuladorNegativos= acumuladorNegativos + numIngresado;
-         }
-         else
-         {//c) La cantidad de ceros.
-            contadorCeros++;
-         }
-
+        acumuladorNegativos= acumuladorNegativos + numIngresado;
      }
-     //f) El número y la letra del máximo y el mínimo.
-     if (numIngresado > maximoNumero || bandera == false)
+     else
+     {//c) La cantidad de ceros.
+        contadorCeros++;
+     }
+     
+     if (numIngresado > maximoNumero || bandera == false)//f) El número y la letra del máximo y el mínimo.
      {
     	maximoNumero= numIngresado;
     	maximaLetra= letra;
@@ -121,12 +111,3 @@ function mostrar()
     document.write("El número maximo es " + maximoNumero + " y La Letra del máximo: " + maximaLetra + "<br>");
     document.write("El número mínimo es " + minimoNumero + " y la letra del minimo: " + minimoLetra + "<br>");
 }
-/*
-Testeo con los siguientes datos
-( d , -150(mal) , -50(bien))
-( z , 0)
-( g , 20)
-( a , 150(mal) , 0(bien))
-( b , 3)
-( k , 7)
-*/

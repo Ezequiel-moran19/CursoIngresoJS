@@ -11,7 +11,7 @@ a) Del más caro de los jabones, la cantidad de unidades y el fabricante
 b) Del tipo de producto con más unidades en total de la compra, el promedio por compra
 c) Cuántas unidades de Barbijos se compraron en total
 */
-/*
+
  function mostrar()
 {
   let tipo;
@@ -111,7 +111,7 @@ c) Cuántas unidades de Barbijos se compraron en total
    document.write("c) Se compraron en total : " + acumuladorBarbijo + " unidades de Barbijos<br>");
   
 }
-*/
+
  /* 
   }
 }

@@ -10,9 +10,9 @@ tienen mas de 38 de temperatura
 e) El promedio de edad entre los hombres solteros.
 */
 // PARCIAL REALIZADO EL 14/2022 FINALIZADO, FALTA VERIFICAR..
-/*
+
 function mostrar()
-{
+
    let nombre;
    let edad;
    let genero;
@@ -120,5 +120,5 @@ document.write("El nombre de la persona con mas temperatura es: " + nombreMayorT
 promedioEdadSolteros= acumuladorEdadSolteros / contadorSolteros;
 document.write("Promedio de edad entre los hombres solteros: " + promedioEdadSolteros);//PUNTO E
 }
-*/
+
    

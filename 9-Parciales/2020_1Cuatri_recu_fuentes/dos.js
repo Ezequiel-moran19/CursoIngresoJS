@@ -17,7 +17,7 @@ d) Informar el tipo con mas cantidad de bolsas.
 f) El tipo mas caro
 */
 //PARCIAL REALIZADO DOMINGO 13/2022 finalizado/
-/*
+
 
 function mostrar()
 {
@@ -145,4 +145,3 @@ function mostrar()
   document.write("El tipo de porducto mas caro es: " + tipoMasCaro + "<br>");
   
 }
-*/
